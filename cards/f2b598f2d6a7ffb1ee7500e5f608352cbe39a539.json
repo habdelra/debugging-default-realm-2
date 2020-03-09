@@ -1,0 +1,54 @@
+{
+  "data": {
+    "attributes": {
+      "csCreated": "2020-03-09T13:57:00.392Z",
+      "csFields": {
+      },
+      "csId": "f2b598f2d6a7ffb1ee7500e5f608352cbe39a539",
+      "csRealm": "http://localhost:3000/api/realms/default",
+      "csTitle": "test",
+      "csUpdated": "2020-03-09T13:57:00.392Z"
+    },
+    "relationships": {
+      "csAdoptsFrom": {
+        "data": {
+          "id": "https://base.cardstack.com/public/cards/base",
+          "type": "cards"
+        }
+      }
+    },
+    "type": "cards"
+  },
+  "included": [
+    {
+      "attributes": {
+        "csCreated": "2020-03-09T13:57:00.582Z",
+        "csDescription": "This represents cards of any type",
+        "csFeatures": {
+          "embedded-css": "embedded.css",
+          "isolated-css": "isolated.css"
+        },
+        "csFiles": {
+          "card.json": "{\n  \"data\": {\n    \"type\": \"cards\",\n    \"attributes\": {\n      \"csTitle\": \"Base Card\",\n      \"csDescription\": \"This represents cards of any type\",\n      \"csFeatures\": {\n        \"isolated-css\": \"isolated.css\",\n        \"embedded-css\": \"embedded.css\"\n      }\n    },\n    \"relationships\": {\n    }\n  }\n}",
+          "embedded.css": "/* This is the embedded base card template. All cards will inherit this CSS if\nno custom CSS is provided for the card.*/\n\n/* Embedded card default styles */\n.card-boundary {\n  width: 100%;\n  margin: 0;\n  background-color: white;\n  color: black;\n  font: 400 10px/1.2 'Open Sans';\n  letter-spacing: 0.03em;\n  text-align: left;\n  overflow: hidden;\n  overflow-wrap: break-word;\n  word-break: break-word;\n}\n\n.card-boundary .embedded-card--view-fields {\n  display: grid; /* Helpful for ordering fields */\n}\n.card-boundary .embedded-card--view-fields::before,\n.card-boundary .embedded-card--view-fields::after {\n  height: 0; /* for firefox */\n}\n\n.card-boundary .field {\n  display: grid;\n  grid-template-columns: 1fr 1.5fr;\n  grid-gap: 0 10px;\n  width: 100%;\n  margin: 0 auto;\n  padding: 0 15px 15px;\n}\n.card-boundary .field.field-type-belongs-to-view-field,\n.card-boundary .field:first-of-type {\n  padding-top: 15px;\n}\n\n.card-boundary .label {\n  padding-bottom: 4px;\n  color: var(--black);\n  font-size: 7px;\n  font-weight: bold;\n  letter-spacing: 0.1em;\n  line-height: 1.364;\n  text-transform: uppercase;\n}\n\n\n/**** SPECIAL CORE TYPES ****/\n/* has-many and belongs-to field values, which are embedded cards, are full-width by default */\n\n/* type: link */\n/* use `label` for link text and `value` for link url */\n.card-boundary .link-viewer {\n  color: var(--cobalt-blue);\n  text-decoration: underline;\n  font-weight: 600;\n}\n\n/* type: cta */\n/* use `label` for button text and `value` for button link url */\n.card-boundary .cta-viewer {\n  min-height: 30px;\n  border-radius: 6px;\n  font-size: 10px;\n  font-weight: 700;\n  line-height: calc(22 / 15);\n  letter-spacing: 0.03em;\n  padding-top: 11px;\n  padding-bottom: 11px;\n}\n\n/* type: decorative-image */\n.card-boundary .decorative-image-viewer {\n  max-height: 50px;\n}\n\n\n/**** SPECIAL FIELD NAMES ****/\n\n/* full-width by default */\n.card-boundary .title-field,\n.card-boundary .highlight-title-field,\n.card-boundary .background-image-field,\n.card-boundary .body-field,\n.card-boundary .divider-field {\n  display: block;\n}\n\n/* label hidden by default */\n.card-boundary .title-label,\n.card-boundary .highlight-title-label,\n.card-boundary .background-image-label,\n.card-boundary .body-label,\n.card-boundary .divider-label,\n.card-boundary .title-logo-label {\n  display: none;\n}\n\n.card-boundary .title-logo-field,\n.card-boundary .divider-value {\n  display: none;\n}\n\n/* field-name: background-image */\n.card-boundary .background-image-field {\n  max-width: 100%;\n  padding: 0;\n  order: -100; /* first item on page */\n}\n.card-boundary .background-image-value {\n  width: 100%;\n  max-height: 75px;\n  object-fit: cover;\n  object-position: center;\n}\n\n/* field-name: title */\n.card-boundary .title-field {\n  padding-bottom: 7px;\n}\n.card-boundary .title-value {\n  color: var(--dark-gray);\n  font-size: 14px;\n  font-weight: bold;\n  letter-spacing: 0.015em;\n  line-height: 1.2;\n}\n\n/* field-name: highlight-title */\n.card-boundary .highlight-title-value {\n  color: var(--red);\n  font-size: 10px;\n  font-weight: bold;\n  letter-spacing: 0.035em;\n  text-transform: capitalize;\n}\n\n/* field-name: divider */\n.card-boundary .divider-field {\n  width: calc(100% - 30px);\n  border-top: 1px solid var(--light-gray);\n}\n\n\n/* Product card */\n.card-boundary .product-rating-field,\n.card-boundary .product-ranking-field,\n.card-boundary .field.product-link-field {\n  display: none;\n}\n\n\n/* Photo card */\n.card-boundary .photo-image-url-field {\n  display: block;\n}\n.card-boundary .photo-image-url-label {\n  display: none;\n}\n.card-boundary .photo-image-url-value {\n  width: 100%;\n  max-height: 130px;\n  margin: 0 auto;\n  object-fit: cover;\n  object-position: top center;\n}\n",
+          "isolated.css": "/* This is the isolated base card template. All cards will inherit this CSS if\nno custom CSS is provided for the card.*/\n\n.card-boundary {\n  width: 100%;\n  margin: 0 auto;\n\n  background-color: white;\n  color: black;\n  font: 400 15px/1.467 'Open Sans';\n  letter-spacing: 0.03em;\n\n  text-align: left;\n  overflow: hidden;\n  overflow-wrap: break-word;\n  word-break: break-word;\n}\n\n.card-boundary .embedded-card {\n  margin: inherit;\n  padding: inherit;\n  background-color: inherit;\n  color: inherit;\n  font: inherit;\n  letter-spacing: inherit;\n}\n\n/* WARNING! This is incorrect--a card cannot style cards outside of its card\nboundary--and that includes within embedded cards that it contains. Eventually\nwhen we get CSS isolation working, this will become impossible. */\n.card-boundary .embedded-card .label {\n  font-size: 10px;\n  padding-left: 15px;\n}\n.card-boundary .embedded-card .field {\n  padding: 0 0 15px;\n  grid-gap: 0 50px;\n}\n\n.card-boundary .isolated-card--view-fields {\n  display: grid; /* Helpful for ordering fields */\n}\n.card-boundary .isolated-card--view-fields::before,\n.card-boundary .isolated-card--view-fields::after {\n  height: 0; /* for firefox */\n}\n\n.card-boundary .field {\n  display: grid;\n  grid-template-columns: 1fr 1.5fr;\n  grid-gap: 35px 50px;\n  max-width: 656px;\n  width: 100%;\n  margin: 0 auto;\n  padding: 0 30px 35px;\n}\n.card-boundary .field:first-of-type {\n  padding-top: 35px;\n}\n\n.card-boundary .label {\n  padding-bottom: 4px;\n  color: var(--black);\n  font-size: 11px;\n  font-weight: bold;\n  letter-spacing: 0.1em;\n  line-height: 1.364;\n  text-transform: uppercase;\n}\n\n\n/**** SPECIAL CORE TYPES ****/\n/* has-many and belongs-to field values, which are embedded cards, are full-width by default */\n\n/* type: link */\n/* use `label` for link text and `value` for link url */\n.card-boundary .link-viewer {\n  color: var(--cobalt-blue);\n  text-decoration: underline;\n  font-weight: 600;\n}\n\n/* type: cta */\n/* use `label` for button text and `value` for button link url */\n.card-boundary .cta-viewer {\n  min-height: 45px;\n  border-radius: 6px;\n  font-size: 15px;\n  font-weight: 700;\n  line-height: calc(22 / 15);\n  letter-spacing: 0.03em;\n  padding-top: 11px;\n  padding-bottom: 11px;\n}\n\n\n/**** SPECIAL FIELD NAMES ****/\n\n/* full-width by default */\n.card-boundary .title-field,\n.card-boundary .highlight-title-field,\n.card-boundary .background-image-field,\n.card-boundary .body-field,\n.card-boundary .divider-field {\n  display: block;\n}\n\n/* label hidden by default */\n.card-boundary .title-label,\n.card-boundary .title-logo-label,\n.card-boundary .highlight-title-label,\n.card-boundary .background-image-label,\n.card-boundary .body-label,\n.card-boundary .divider-label {\n  display: none;\n}\n\n.card-boundary .title-logo-field,\n.card-boundary .divider-value {\n  display: none;\n}\n\n/* field-name: background-image */\n.card-boundary .background-image-field {\n  max-width: 100%;\n  padding: 0;\n  order: -100; /* first item on page */\n}\n.card-boundary .background-image-value {\n  width: 100%;\n  max-height: 300px;\n  object-fit: cover;\n  object-position: center;\n}\n\n/* field-name: title */\n.card-boundary .title-value {\n  color: var(--dark-gray);\n  font-size: 25px;\n  font-weight: bold;\n  letter-spacing: 0.015em;\n  line-height: 1.2;\n}\n\n/* field-name: highlight-title */\n.card-boundary .highlight-title-value {\n  color: var(--red);\n  font-size: 18px;\n  font-weight: bold;\n  letter-spacing: 0.035em;\n  text-transform: capitalize;\n}\n\n/* field-name: divider */\n.card-boundary .divider-field {\n  width: calc(100% - 60px);\n  max-width: 596px; /* max-field-width - padding * 2 */\n  border-top: 1px solid var(--light-gray);\n}\n\n\n/* Photo Card */\n/* field-name: photo-image-url */\n.card-boundary .photo-image-url-field {\n  display: block;\n}\n.card-boundary .photo-image-url-label {\n  display: none;\n}\n.card-boundary .photo-image-url-value {\n  max-height: 404px;\n  margin: 0 auto;\n}\n",
+          "package.json": "{\n  \"name\": \"@cardstack/base-card\",\n  \"version\": \"0.0.0\",\n  \"license\": \"MIT\",\n  \"publishConfig\": {\n    \"access\": \"public\"\n  },\n  \"peerDependencies\": {\n    \"@cardstack/hub\": \"*\"\n  },\n  \"devDependencies\": {\n    \"@cardstack/hub\": \"0.16.32\"\n  }\n}\n"
+        },
+        "csId": "base",
+        "csPeerDependencies": {
+          "@cardstack/hub": "*"
+        },
+        "csRealm": "https://base.cardstack.com/public",
+        "csTitle": "Base Card",
+        "csUpdated": "2020-03-09T13:57:00.582Z"
+      },
+      "id": "https://base.cardstack.com/public/cards/base",
+      "meta": {
+        "cardDir": "/Users/hassan/codez/cardstack/cards/base"
+      },
+      "relationships": {
+      },
+      "type": "cards"
+    }
+  ]
+}
