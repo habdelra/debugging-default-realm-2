@@ -2,12 +2,43 @@
   "data": {
     "attributes": {
       "csCreated": "2020-03-09T13:57:00.392Z",
+      "csFieldOrder": [
+        "field-1"
+      ],
+      "csFieldSets": {
+        "embedded": [
+          "field-1"
+        ],
+        "isolated": [
+          "field-1"
+        ]
+      },
       "csFields": {
+        "field-1": {
+          "attributes": {
+            "csFieldArity": "singular",
+            "csFields": {
+            },
+            "csTitle": "First Field"
+          },
+          "relationships": {
+            "csAdoptsFrom": {
+              "data": {
+                "id": "https://base.cardstack.com/public/cards/string-field",
+                "type": "cards"
+              }
+            }
+          }
+        }
       },
       "csId": "f2b598f2d6a7ffb1ee7500e5f608352cbe39a539",
       "csRealm": "http://localhost:3000/api/realms/default",
       "csTitle": "test",
-      "csUpdated": "2020-03-09T13:57:00.392Z"
+      "csUpdated": "2020-03-09T14:04:34.007Z"
+    },
+    "id": "http://localhost:3000/api/realms/default/cards/f2b598f2d6a7ffb1ee7500e5f608352cbe39a539",
+    "meta": {
+      "version": "768634de290b10ab9e12ff1752c3991f890bdf8b"
     },
     "relationships": {
       "csAdoptsFrom": {
@@ -22,7 +53,7 @@
   "included": [
     {
       "attributes": {
-        "csCreated": "2020-03-09T13:57:00.582Z",
+        "csCreated": "2020-03-09T14:04:34.217Z",
         "csDescription": "This represents cards of any type",
         "csFeatures": {
           "embedded-css": "embedded.css",
@@ -40,7 +71,7 @@
         },
         "csRealm": "https://base.cardstack.com/public",
         "csTitle": "Base Card",
-        "csUpdated": "2020-03-09T13:57:00.582Z"
+        "csUpdated": "2020-03-09T14:04:34.217Z"
       },
       "id": "https://base.cardstack.com/public/cards/base",
       "meta": {
