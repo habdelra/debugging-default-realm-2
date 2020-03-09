@@ -5,8 +5,7 @@
       "csFieldOrder": [
         "field-1",
         "field-2",
-        "field-3",
-        "field-4"
+        "field-3"
       ],
       "csFieldSets": {
         "embedded": [
@@ -17,8 +16,7 @@
         "isolated": [
           "field-1",
           "field-2",
-          "field-3",
-          "field-4"
+          "field-3"
         ]
       },
       "csFields": {
@@ -69,36 +67,20 @@
               }
             }
           }
-        },
-        "field-4": {
-          "attributes": {
-            "csFieldArity": "singular",
-            "csFields": {
-            },
-            "csTitle": "Forth Field"
-          },
-          "relationships": {
-            "csAdoptsFrom": {
-              "data": {
-                "id": "https://base.cardstack.com/public/cards/string-field",
-                "type": "cards"
-              }
-            }
-          }
         }
       },
       "csId": "f2b598f2d6a7ffb1ee7500e5f608352cbe39a539",
       "csRealm": "http://localhost:3000/api/realms/default",
       "csTitle": "test",
-      "csUpdated": "2020-03-09T14:07:23.531Z",
-      "field-1": "one",
+      "csUpdated": "2020-03-09T14:07:45.833Z",
+      "field-1": "1",
       "field-2": "two",
       "field-3": true,
       "field-4": "4"
     },
     "id": "http://localhost:3000/api/realms/default/cards/f2b598f2d6a7ffb1ee7500e5f608352cbe39a539",
     "meta": {
-      "version": "e7f31d2254599db014f7115ccee0319d881bd64f"
+      "version": "5fda2ca29f1287ef4fd609b589a37713d9a14b9d"
     },
     "relationships": {
       "csAdoptsFrom": {
@@ -113,7 +95,7 @@
   "included": [
     {
       "attributes": {
-        "csCreated": "2020-03-09T14:07:23.772Z",
+        "csCreated": "2020-03-09T14:07:46.057Z",
         "csDescription": "This represents cards of any type",
         "csFeatures": {
           "embedded-css": "embedded.css",
@@ -131,7 +113,7 @@
         },
         "csRealm": "https://base.cardstack.com/public",
         "csTitle": "Base Card",
-        "csUpdated": "2020-03-09T14:07:23.772Z"
+        "csUpdated": "2020-03-09T14:07:46.057Z"
       },
       "id": "https://base.cardstack.com/public/cards/base",
       "meta": {
